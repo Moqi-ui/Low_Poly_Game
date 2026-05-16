@@ -1,0 +1,48 @@
+/******************************************************
+* @copyright	2024, www.imrcao.com
+*
+* @author		Imrcao
+*
+* @data			2024年06月12号
+*
+* @brief		HUD相关，生命条UI，
+*
+* @see			
+*				
+*
+*
+******************************************************/
+#pragma once
+
+#include "CoreMinimal.h"
+#include "Blueprint/UserWidget.h"
+#include "CharacterOverlay.generated.h"
+
+UCLASS()
+class BLASTER_API UCharacterOverlay : public UUserWidget
+{
+	GENERATED_BODY()
+
+public:
+
+	UPROPERTY(meta = (BindWidget))
+	class UProgressBar* HealthBar;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* HealthText;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* Score;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* DefeatsAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* WeaponAmmoAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* CarriedAmmoAmount;
+
+	UPROPERTY(meta = (BindWidget))
+	UTextBlock* MatchCountdownText;
+};
