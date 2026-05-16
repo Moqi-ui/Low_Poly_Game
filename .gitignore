@@ -1,5 +1,11 @@
 # Visual Studio 2015 user specific files
 .vs/
+.vscode/
+
+# UE Assets
+Content/Assets/*
+Content/__ExternalActors__/*
+Content/__ExternalObjects__/*
 
 # Compiled Object files
 *.slo
@@ -41,6 +47,7 @@
 *.VC.db
 *.VC.opendb
 .vsconfig
+.code-workspace
 
 # Precompiled Assets
 SourceArt/**/*.png
