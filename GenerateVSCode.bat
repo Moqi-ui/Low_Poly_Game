@@ -3,7 +3,7 @@ echo ==========================================
 echo UE5 VSCode Auto Setup Tool
 echo ==========================================
 
-set UE_PATH=D:\Program Files\Epic Games\UE_5.1
+set UE_PATH=D:\UnrealEngine51
 set UBT="%UE_PATH%\Engine\Binaries\DotNET\UnrealBuildTool\UnrealBuildTool.exe"
 
 set PROJECT_DIR=%cd%

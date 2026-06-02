@@ -4,7 +4,7 @@
 - 项目名：`Blaster`
 - 引擎版本：`Unreal Engine 5.1`
 - 类型：`C++ + Blueprint` 混合开发的多人射击项目
-- 联机方案：启用了 `OnlineSubsystemSteam`，Steam Dev App ID 为 `480`
+- 联机方案：**Dedicated Server (DS) 架构**，基于 IP 直连，不依赖 Steam
 - 主要特征：角色移动/瞄准/开火/换弹、武器系统、投射物、HUD、多人 Session/Lobby/对战地图流程
 
 ## 目录结构
@@ -82,12 +82,17 @@
 - `TransitionMap=/Game/Maps/TransitionMap`
 - `ServerDefaultMap=/Game/Maps/BlasterMap`
 
-### OnlineSubsystem / Steam
-`Config/DefaultEngine.ini`
-- `DefaultPlatformService=Steam`
-- `bEnabled=true`
-- `SteamDevAppId=480`
-- 游戏网络驱动优先使用 `SteamNetDriver`
+### Dedicated Server 架构
+`Source/BlasterServer/`
+- `BlasterServer.Target.cs`：DS 构建目标（`TargetType::Server`），复用 `Blaster` 模块
+- `BlasterServer.Build.cs`：DS 模块依赖（Core、Engine、OnlineSubsystem）
+- 不依赖 `OnlineSubsystemSteam`，使用 IP 直连方式联机
+- DS 启动命令：`UnrealEditor-Cmd.exe <project> /Game/Maps/Lobby?listen -server -log`
+- 客户端连接命令：`UnrealEditor.exe <project> <server_ip> -game -windowed`
+
+### 测试启动脚本
+- `StartTest.bat`（项目根目录）：使用 `Binaries/Win64/` 下的本地构建二进制启动 DS + 双 Client
+- `Build/StartTest.bat`：使用打包后的 `WindowsServer/` 和 `Windows/` 目录的二进制启动
 
 ### 输入配置
 `Config/DefaultInput.ini`
@@ -123,7 +128,7 @@
 2. `Source/Blaster/BlasterComponents/CombatComponent.h`
 3. `Source/Blaster/Weapon/Weapon.h`
 4. `Source/Blaster/GameMode/BlasterGameMode.h`
-5. `Plugins/MultiplayerSessions/Source/MultiplayerSessions/Public/MultiplayerSessionsSubsystem.h`
+5. `Source/BlasterServer/BlasterServer.Target.cs`
 6. `Config/DefaultEngine.ini`
 7. `Config/DefaultInput.ini`
 

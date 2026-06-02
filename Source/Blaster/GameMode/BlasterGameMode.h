@@ -44,6 +44,9 @@ protected:
 	virtual void OnMatchStateSet() override;
 
 
+	UPROPERTY(EditDefaultsOnly, Category = "Debug")
+	bool bForceUnlitForTesting = true;
+
 private:
 	float CountdownTime = 0.f;
 
