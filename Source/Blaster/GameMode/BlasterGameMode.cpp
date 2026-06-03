@@ -27,6 +27,11 @@ void ABlasterGameMode::BeginPlay()
 	LevelStartingTime = GetWorld()->GetTimeSeconds();
 	UE_LOG(LogTemp, Display, TEXT("LevelStartingTime: %f"), LevelStartingTime);
 	GEngine->AddOnScreenDebugMessage(-1, 5.f, FColor::Red, FString::Printf(TEXT("LevelStartingTime: %f"), LevelStartingTime));
+
+	if (bForceUnlitForTesting && !IsRunningDedicatedServer())
+	{
+		GetWorld()->Exec(GetWorld(), TEXT("viewmode unlit"));
+	}
 }
 void ABlasterGameMode::Tick(float DeltaTime)
 {
