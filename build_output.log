@@ -1,0 +1,11 @@
+Log file: C:\UnrealEngine-5.7.4-release\Engine\Programs\UnrealBuildTool\Log.txt
+Using 'git status' to determine working set for adaptive non-unity build (C:\projects\low_poly_game).
+Creating makefile for BlasterEditor (no existing makefile)
+Unhandled exception. System.ArgumentException: Path fragment '"docs/\345\205\254\345\217\270\347\224\265\350\204\221.md"' contains invalid directory separators.
+   at EpicGames.Core.FileSystemReference.CombineStrings(DirectoryReference baseDirectory, String[] fragments) in C:\UnrealEngine-5.7.4-release\Engine\Source\Programs\Shared\EpicGames.Core\FileSystemReference.cs:line 92
+   at UnrealBuildTool.GitSourceFileWorkingSet.AddPath(String Path) in C:\UnrealEngine-5.7.4-release\Engine\Source\Programs\UnrealBuildTool\System\SourceFileWorkingSet.cs:line 287
+   at UnrealBuildTool.GitSourceFileWorkingSet.OutputDataReceived(Object Sender, DataReceivedEventArgs Args) in C:\UnrealEngine-5.7.4-release\Engine\Source\Programs\UnrealBuildTool\System\SourceFileWorkingSet.cs:line 253
+   at System.Diagnostics.AsyncStreamReader.FlushMessageQueue(Boolean rethrowInNewThread)
+--- End of stack trace from previous location ---
+   at System.Threading.ThreadPoolWorkQueue.Dispatch()
+   at System.Threading.PortableThreadPool.WorkerThread.WorkerThreadStart()
