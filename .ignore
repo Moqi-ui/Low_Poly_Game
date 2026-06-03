@@ -1,5 +1,9 @@
-.vscode
-Content
-Intermediate
-Plugins/MultiplayerSessions/Content
-Plugins/MultiplayerSessions/Intermediate
+/.git
+/.vs
+/.vscode
+/Content
+/docs
+/Intermediate
+/Saved
+/Plugins/MultiplayerSessions/Content
+/Plugins/MultiplayerSessions/Intermediate

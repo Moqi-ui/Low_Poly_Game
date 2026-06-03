@@ -117,8 +117,7 @@ void UMultiplayerSessionsSubsystem::FindSessions(int32 MaxSearchResults)
 	LastSessionSearch->MaxSearchResults = MaxSearchResults;
 	// NULL 子系统使用 LAN 搜索，否则使用在线搜索
 	LastSessionSearch->bIsLanQuery = IOnlineSubsystem::Get()->GetSubsystemName() == "NULL" ? true : false;
-	// 仅搜索设置了 Presence 的会话
-	LastSessionSearch->QuerySettings.Set(SEARCH_PRESENCE, true, EOnlineComparisonOp::Equals);
+	// 仅搜索设置了 Presence 的会话（UE 5.7 已移除 SEARCH_PRESENCE 宏，改用 bUsesPresence 过滤）
 
 	const ULocalPlayer* LocalPlayer = GetWorld()->GetFirstLocalPlayerFromController();
 	// 调用底层 FindSessions（异步），若返回 false 表示同步阶段失败

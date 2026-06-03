@@ -5,7 +5,7 @@ echo Unreal Engine Generate Visual Studio Solution
 echo ======================================
 
 REM Unreal Engine 路径（修改为你的 UE 路径）
-set UE_PATH=D:\Program Files\Epic Games\UE_5.1
+set UE_PATH=C:\UnrealEngine-5.7.4-release
 
 REM 当前目录
 set PROJECT_DIR=%cd%

@@ -1,8 +1,14 @@
 # Blaster Project Overview
 
+## 用户约定
+1. 不要擅自进行git相关操作，包括提交、推送等。git操作由我亲自执行。
+
 ## 项目定位
 - 项目名：`Blaster`
-- 引擎版本：`Unreal Engine 5.1`
+- 引擎版本：`Unreal Engine 5.7.4`（源码版引擎，路径 `C:\UnrealEngine-5.7.4-release`）
+- 构建方式：源码版引擎，日常开发编译使用 `BlasterEditor`（Editor）目标，打包 DS 服务器使用 `BlasterServer` 目标
+  - **不要使用 `Blaster`（Game）目标编译**：源码版引擎仅预编译了 Editor 配置，Game 目标会触发大量引擎模块重新编译，极其耗时
+  - Editor 编译命令：`Engine\Build\BatchFiles\Build.bat BlasterEditor Win64 Development C:\projects\low_poly_game\Blaster.uproject -waitmutex`
 - 类型：`C++ + Blueprint` 混合开发的多人射击项目
 - 联机方案：启用了 `OnlineSubsystemSteam`，Steam Dev App ID 为 `480`
 - 主要特征：角色移动/瞄准/开火/换弹、武器系统、投射物、HUD、多人 Session/Lobby/对战地图流程
@@ -127,6 +133,5 @@
 6. `Config/DefaultEngine.ini`
 7. `Config/DefaultInput.ini`
 
-## 用户约定
-1. 不要擅自进行git相关操作，包括提交、推送等。git操作由我亲自执行。
+
 

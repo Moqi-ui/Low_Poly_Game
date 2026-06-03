@@ -26,7 +26,7 @@ void UMenu::MenuSetup(int32 NumberOfPublicConnections, FString TypeOfMatch, FStr
 	// 将控件添加到视口并设为可见、可聚焦
 	AddToViewport();
 	SetVisibility(ESlateVisibility::Visible);
-	bIsFocusable = true;
+	SetIsFocusable(true);
 
 	// 切换到 UIOnly 输入模式：只响应 UI 交互，不传递游戏输入
 	UWorld* World = GetWorld();
