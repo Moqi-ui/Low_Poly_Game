@@ -50,6 +50,7 @@ Content/__ExternalObjects__/*
 *.code-workspace
 *.log
 *.bat
+*.ignore
 
 # Precompiled Assets
 SourceArt/**/*.png
@@ -82,4 +83,3 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
-Blaster.uproject

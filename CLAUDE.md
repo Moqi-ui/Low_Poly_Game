@@ -5,7 +5,7 @@
 
 ## 项目定位
 - 项目名：`Blaster`
-- 引擎版本：`Unreal Engine 5.7.4`（源码版引擎，路径 `C:\UnrealEngine-5.7.4-release`）
+- 引擎版本：`Unreal Engine 5.7.4`（源码版引擎，路径 `F:\UnrealEngine-5.7.4-release`）
 - 构建方式：源码版引擎，日常开发编译使用 `BlasterEditor`（Editor）目标，打包 DS 服务器使用 `BlasterServer` 目标
   - **不要使用 `Blaster`（Game）目标编译**：源码版引擎仅预编译了 Editor 配置，Game 目标会触发大量引擎模块重新编译，极其耗时
   - Editor 编译命令：`Engine\Build\BatchFiles\Build.bat BlasterEditor Win64 Development C:\projects\low_poly_game\Blaster.uproject -waitmutex`
