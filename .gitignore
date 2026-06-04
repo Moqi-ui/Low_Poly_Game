@@ -46,8 +46,10 @@ Content/__ExternalObjects__/*
 *.sdf
 *.VC.db
 *.VC.opendb
-.vsconfig
-.code-workspace
+*.vsconfig
+*.code-workspace
+*.log
+*.bat
 
 # Precompiled Assets
 SourceArt/**/*.png
@@ -80,3 +82,4 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+Blaster.uproject
